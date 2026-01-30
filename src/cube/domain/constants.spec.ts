@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { Color, CornerPosition, EdgePosition, Face, makeValueGuard, makeKeyGuard } from './cube'
+import { Color, CornerPosition, EdgePosition, Face } from './constants'
 
-describe('Cube', () => {
+describe('Cube Domain - Constants', () => {
   describe('Color constants', () => {
     it('should have exactly six color values', () => {
       const colorValues = Object.values(Color)
@@ -15,19 +15,7 @@ describe('Cube', () => {
 
       expect(uniqueValues.size).toBe(values.length)
     })
-
-    it('should accept only valid colors', () => {
-      const isColor = makeValueGuard(Color)
-
-      expect(isColor(Color.White)).toBe(true)
-      expect(isColor('Wt')).toBe(true)
-
-      expect(isColor('P')).toBe(false)
-      expect(isColor('WHITE')).toBe(false)
-      expect(isColor(123)).toBe(false)
-      expect(isColor(null)).toBe(false)
-    })
-  })  
+  })
 
   describe('Face constants', () => {
     it('should have six face values', () => {
@@ -41,18 +29,6 @@ describe('Cube', () => {
       const uniqueValues = new Set(values)
 
       expect(uniqueValues.size).toBe(values.length)
-    })
-
-    it('should accept only valid faces', () => {
-      const isFace = makeValueGuard(Face)
-
-      expect(isFace(Face.Up)).toBe(true)
-      expect(isFace('U')).toBe(true)
-
-      expect(isFace('X')).toBe(false)
-      expect(isFace('UP')).toBe(false)
-      expect(isFace(123)).toBe(false)
-      expect(isFace(null)).toBe(false)
     })
   })
 
@@ -69,17 +45,6 @@ describe('Cube', () => {
 
       expect(uniqueValues.size).toBe(values.length)
     })
-
-    it('should accept only valid corner positions', () => {
-      const isCornerPosition = makeKeyGuard(CornerPosition)
-
-      expect(isCornerPosition('UFR')).toBe(true)
-      expect(isCornerPosition('DLF')).toBe(true)
-      expect(isCornerPosition('XYZ')).toBe(false)
-      expect(isCornerPosition('UFB')).toBe(false)
-      expect(isCornerPosition(123)).toBe(false)
-      expect(isCornerPosition(null)).toBe(false)
-    })
   })
 
   describe('Edge positions', () => {
@@ -94,17 +59,6 @@ describe('Cube', () => {
       const uniqueValues = new Set(values)
 
       expect(uniqueValues.size).toBe(values.length)
-    })
-
-    it('should accept only valid edge positions', () => {
-      const isEdgePosition = makeKeyGuard(EdgePosition)
-
-      expect(isEdgePosition('UF')).toBe(true)
-      expect(isEdgePosition('BL')).toBe(true)
-      expect(isEdgePosition('XY')).toBe(false)
-      expect(isEdgePosition('UZ')).toBe(false)
-      expect(isEdgePosition(123)).toBe(false)
-      expect(isEdgePosition(null)).toBe(false)
     })
   })
 })

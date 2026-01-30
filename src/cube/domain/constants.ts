@@ -4,7 +4,7 @@ export const Color = {
   Red: 'Rd',
   Orange: 'Og',
   Blue: 'Bl',
-  Green: 'Gn',
+  Green: 'Gn'
 } as const
 
 export const Face = {
@@ -13,9 +13,8 @@ export const Face = {
   Front: 'F',
   Back: 'B',
   Left: 'L',
-  Right: 'R',
+  Right: 'R'
 } as const
-
 
 export const CornerPosition = {
   UFR: Face.Up + Face.Front + Face.Right,
@@ -42,15 +41,3 @@ export const EdgePosition = {
   BR: Face.Back + Face.Right,
   BL: Face.Back + Face.Left
 } as const
-
-export const makeValueGuard = <T extends Record<string, string>>(obj: T) => {
-  const set = new Set<string>(Object.values(obj))
-
-  return (value: unknown): value is T[keyof T] => typeof value === 'string' && set.has(value)
-}
-
-export const makeKeyGuard = <T extends Record<string, unknown>>(obj: T) => {
-  const set = new Set<string>(Object.keys(obj))
- 
-  return (key: unknown): key is keyof T => typeof key === 'string' && set.has(key)
-}
