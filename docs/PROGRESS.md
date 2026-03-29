@@ -28,12 +28,27 @@
 - [x] Face labels on each grid
 - [ ] Responsive layout (mobile + desktop)
 
-## M2 — Moves + Design System
+## M2 — Design System + Moves
 
-- [ ] Design system: DaisyUI + Radix integration
-- [ ] Design system: custom dark theme with OKLch colors
-- [ ] Design system: cube face colors as CSS custom properties
-- [ ] Design system: refactor existing components to DaisyUI classes
+### Design System ([plan](~/.claude/plans/rubiks-cube-solver-02-design-system.md))
+
+- [ ] DaisyUI installation & plugin configuration (Phase 1)
+- [ ] Custom "rubiks" dark theme with OKLch colors (Phase 1)
+- [ ] Cube face colors as Tailwind theme values (Phase 1)
+- [ ] Page `<title>` fix (Phase 1)
+- [ ] Color mapping refactor — colors.ts → bg-cube-\* classes (Phase 2)
+- [ ] Accessible color name map — colorNameByCode (Phase 2)
+- [ ] FaceGrid semantic HTML + tactile depth (`<figure>`, `<figcaption>`, `<span>`) (Phase 3)
+- [ ] Sticker cells `role="img"` + `aria-label` with color names (Phase 3)
+- [ ] Face labels AAA contrast — text-base-content/70 (Phase 3)
+- [ ] CubeNet `<section>` card with `aria-label` (Phase 3)
+- [ ] CubeControls `<section>` card (Phase 3)
+- [ ] App layout — `<header>` navbar + `<main>` (Phase 3)
+- [ ] Radix Dialog integration — DialogShell with `aria-label="Close"` (Phase 4)
+- [ ] Final cleanup, accessibility audit & visual verification (Phase 5)
+
+### Moves
+
 - [ ] Move token type (18 face moves)
 - [ ] Permutation tables (cycles + orientation deltas)
 - [ ] applyMove() pure function
