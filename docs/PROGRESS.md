@@ -25,7 +25,7 @@
 - [x] FaceGrid component
 - [x] CubeNet cross-layout component
 - [x] CubeControls placeholder
-- [ ] Face labels on each grid
+- [x] Face labels on each grid
 - [ ] Responsive layout (mobile + desktop)
 
 ## M2 — Moves + Design System

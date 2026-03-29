@@ -11,7 +11,7 @@ export const App = () => {
         <h1 className='title'>Rubik's Cube Solver</h1>
         <p>Welcome to the Rubik's Cube Solver application!</p>
       </section>
-      <section className='ringBorder flex w-full flex-col items-start justify-center gap-4 p-4 md:flex-row lg:max-w-2/6'>
+      <section className='ringBorder flex w-full flex-col items-start justify-center gap-4 p-4 md:flex-row lg:max-w-lg'>
         <CubeNet stickersByFace={stickersByFace} />
         <CubeControls />
       </section>

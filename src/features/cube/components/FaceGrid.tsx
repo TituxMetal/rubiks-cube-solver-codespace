@@ -7,7 +7,7 @@ interface FaceGridProps {
   label?: FaceCode
 }
 
-export const FaceGrid = ({ stickers, label, className }: FaceGridProps) => {
+export const FaceGrid = ({ stickers, label, className = '' }: FaceGridProps) => {
   if (import.meta.env.DEV && stickers.length !== 9) {
     throw new Error(`FaceGrid expects 9 stickers, got ${stickers.length}`)
   }

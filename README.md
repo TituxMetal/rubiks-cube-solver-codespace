@@ -1,8 +1,4 @@
----
-title: "Rubik's Cube Solver"
----
-
-## Rubik's Cube Solver
+# Rubik's Cube Solver
 
 A deterministic, testable 3×3 Rubik's Cube engine and
 interactive visualizer built with TypeScript, React, and Vite.

@@ -59,7 +59,7 @@ Each `ColorCode` maps to a Tailwind class:
 - [x] `CubeNet` displays all 6 faces in cross layout
 - [x] `FaceGrid` renders 3×3 grid with correct colors
 - [x] Color mapping covers all 6 colors
-- [ ] Face labels displayed on each face
+- [x] Face labels displayed on each face
 - [ ] Responsive: works on mobile and desktop
 
 ---

@@ -90,7 +90,7 @@ scramble in the browser.
 - **Language**: TypeScript (strict mode)
 - **Styling**: Tailwind CSS v4
 - **Testing**: Vitest
-- **Package manager**: Bun (migration planned)
+- **Package manager**: Bun
 - **Architecture**: hexagonal-inspired layers
   (domain → application → infrastructure → features)
 
