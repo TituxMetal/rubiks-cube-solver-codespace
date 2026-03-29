@@ -1,5 +1,14 @@
 import type { ColorCode, FaceCode } from '../../../cube/domain'
-import { stickerClassByColor } from '../lib/colors'
+import { colorNameByCode, stickerClassByColor } from '../lib/colors'
+
+const faceNameByCode: Record<FaceCode, string> = {
+  U: 'Up',
+  D: 'Down',
+  F: 'Front',
+  B: 'Back',
+  L: 'Left',
+  R: 'Right'
+}
 
 interface FaceGridProps {
   stickers: readonly ColorCode[]
@@ -13,14 +22,26 @@ export const FaceGrid = ({ stickers, label, className = '' }: FaceGridProps) => 
   }
 
   return (
-    <div className={`inline-flex flex-col gap-2 ${className}`}>
-      {label ? <div className='label'>{label}</div> : null}
+    <figure
+      className={`inline-flex flex-col gap-2 ${className}`}
+      aria-label={label ? `${faceNameByCode[label]} face` : undefined}
+    >
+      {label ? (
+        <figcaption className='text-base-content/70 text-center text-xs tracking-widest'>
+          {label}
+        </figcaption>
+      ) : null}
 
-      <div className='faceGrid size-14'>
+      <div className='bg-base-300 ring-base-content/20 grid size-20 grid-cols-3 gap-1 rounded-sm p-1 ring-1 md:size-28 lg:size-36'>
         {stickers.slice(0, 9).map((color, index) => (
-          <div key={index} className={['faceCell', stickerClassByColor[color]].join(' ')} />
+          <span
+            key={index}
+            role='img'
+            aria-label={colorNameByCode[color]}
+            className={`ring-base-content/10 hover:shadow-primary/20 aspect-square rounded-xs ring-1 transition-shadow hover:shadow-md ${stickerClassByColor[color]}`}
+          />
         ))}
       </div>
-    </div>
+    </figure>
   )
 }
