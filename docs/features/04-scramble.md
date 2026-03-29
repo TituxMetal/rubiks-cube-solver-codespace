@@ -1,9 +1,6 @@
----
-title: "Feature Shape: Scramble"
-status: not-started
-milestone: M4
-date: 2026-03-29
----
+# Feature Shape: Scramble
+
+> Status: not-started | Milestone: M4 | Date: 2026-03-29
 
 ## Summary
 
@@ -70,9 +67,9 @@ function scramble(
 
 ## Files (planned)
 
-| File | Role |
-| ------ | ------ |
-| `src/cube/application/contracts/random.ts` | Random contract |
-| `src/cube/infrastructure/random/mathRandom.ts` | Production impl |
-| `src/cube/infrastructure/random/seededRandom.ts` | Test impl |
-| `src/cube/application/use-cases/scramble.ts` | Scramble use-case |
+| File                                             | Role              |
+| ------------------------------------------------ | ----------------- |
+| `src/cube/application/contracts/random.ts`       | Random contract   |
+| `src/cube/infrastructure/random/mathRandom.ts`   | Production impl   |
+| `src/cube/infrastructure/random/seededRandom.ts` | Test impl         |
+| `src/cube/application/use-cases/scramble.ts`     | Scramble use-case |

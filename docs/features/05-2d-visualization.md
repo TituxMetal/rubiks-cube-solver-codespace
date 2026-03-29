@@ -1,9 +1,6 @@
----
-title: "Feature Shape: 2D Net Visualization"
-status: in-progress
-milestone: M1
-date: 2026-03-29
----
+# Feature Shape: 2D Net Visualization
+
+> Status: in-progress | Milestone: M1 | Date: 2026-03-29
 
 ## Summary
 
@@ -69,10 +66,10 @@ Each `ColorCode` maps to a Tailwind class:
 
 ## Files
 
-| File | Role |
-| ------ | ------ |
-| `src/cube/infrastructure/render/toStickers.ts` | State → stickers |
-| `src/features/cube/components/CubeNet.tsx` | Cross layout |
-| `src/features/cube/components/FaceGrid.tsx` | Single face grid |
-| `src/features/cube/lib/colors.ts` | Color → CSS class map |
-| `src/features/cube/lib/getDemoStickers.ts` | Demo data |
+| File                                           | Role                  |
+| ---------------------------------------------- | --------------------- |
+| `src/cube/infrastructure/render/toStickers.ts` | State → stickers      |
+| `src/features/cube/components/CubeNet.tsx`     | Cross layout          |
+| `src/features/cube/components/FaceGrid.tsx`    | Single face grid      |
+| `src/features/cube/lib/colors.ts`              | Color → CSS class map |
+| `src/features/cube/lib/getDemoStickers.ts`     | Demo data             |

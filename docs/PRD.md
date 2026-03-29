@@ -1,9 +1,6 @@
----
-title: Product Requirements Document – Rubik's Cube Solver
-version: "1.0"
-status: draft
-date: 2026-03-29
----
+# Product Requirements Document – Rubik's Cube Solver
+
+> Status: draft | Version: 1.0 | Date: 2026-03-29
 
 ## Overview
 
@@ -30,16 +27,16 @@ fully-featured, well-documented open-source application.
 
 ## Goals
 
-| # | Goal | Priority |
-| --- | ------ | ---------- |
-| G1 | Accurate, deterministic 3×3 cube model | Must-have |
-| G2 | Full set of face moves (U, D, L, R, F, B + inverses + doubles) | Must-have |
-| G3 | Interactive 2D net visualization | Must-have |
-| G4 | Scramble generation | Must-have |
-| G5 | Move history and undo | Should-have |
-| G6 | Basic solving algorithm (layer-by-layer or similar) | Should-have |
-| G7 | 3D visualization | Nice-to-have |
-| G8 | Advanced solvers (CFOP, Kociemba) | Nice-to-have |
+| #   | Goal                                                           | Priority     |
+| --- | -------------------------------------------------------------- | ------------ |
+| G1  | Accurate, deterministic 3×3 cube model                         | Must-have    |
+| G2  | Full set of face moves (U, D, L, R, F, B + inverses + doubles) | Must-have    |
+| G3  | Interactive 2D net visualization                               | Must-have    |
+| G4  | Scramble generation                                            | Must-have    |
+| G5  | Move history and undo                                          | Should-have  |
+| G6  | Basic solving algorithm (layer-by-layer or similar)            | Should-have  |
+| G7  | 3D visualization                                               | Nice-to-have |
+| G8  | Advanced solvers (CFOP, Kociemba)                              | Nice-to-have |
 
 ---
 
@@ -75,13 +72,13 @@ scramble in the browser.
 
 ## Success criteria
 
-| Criterion | Measurement |
-| ----------- | ------------- |
-| Model correctness | Every move ×4 = identity; solved state is unique |
-| Test coverage | All domain and application logic covered by unit tests |
-| Determinism | Same input always produces same output (pure functions) |
-| Responsiveness | UI updates in under 16 ms after a move |
-| Accessibility | Keyboard-navigable controls |
+| Criterion         | Measurement                                             |
+| ----------------- | ------------------------------------------------------- |
+| Model correctness | Every move ×4 = identity; solved state is unique        |
+| Test coverage     | All domain and application logic covered by unit tests  |
+| Determinism       | Same input always produces same output (pure functions) |
+| Responsiveness    | UI updates in under 16 ms after a move                  |
+| Accessibility     | Keyboard-navigable controls                             |
 
 ---
 
@@ -139,8 +136,8 @@ scramble in the browser.
 
 ## Risks
 
-| Risk | Mitigation |
-| ------ | ------------ |
-| Orientation math errors in move tables | Extensive identity and superflip tests |
-| State mutation bugs | All domain functions are pure; freeze state in dev |
-| Scope creep toward solver | Strict MVP boundary; solver is post-MVP |
+| Risk                                   | Mitigation                                         |
+| -------------------------------------- | -------------------------------------------------- |
+| Orientation math errors in move tables | Extensive identity and superflip tests             |
+| State mutation bugs                    | All domain functions are pure; freeze state in dev |
+| Scope creep toward solver              | Strict MVP boundary; solver is post-MVP            |

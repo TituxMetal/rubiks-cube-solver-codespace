@@ -1,8 +1,6 @@
----
-title: "Rubik's Cube 3×3 – Architecture & Conventions"
-status: active
-date: 2026-03-29
----
+# Rubik's Cube 3×3 – Architecture & Conventions
+
+> Status: active | Date: 2026-03-29
 
 ## Project goal
 
@@ -33,12 +31,14 @@ is handled separately via global cube rotations.
 
 Faces are fixed and named using standard notation:
 
+```text
 U (Up)    = White
 D (Down)  = Yellow
 F (Front) = Green
 B (Back)  = Blue
 R (Right) = Red
 L (Left)  = Orange
+```
 
 This convention never changes inside the engine.
 

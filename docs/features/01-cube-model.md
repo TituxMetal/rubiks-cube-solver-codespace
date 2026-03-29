@@ -1,9 +1,6 @@
----
-title: "Feature Shape: Cube Domain Model"
-status: done
-milestone: M1
-date: 2026-03-29
----
+# Feature Shape: Cube Domain Model
+
+> Status: done | Milestone: M1 | Date: 2026-03-29
 
 ## Summary
 
@@ -70,12 +67,12 @@ pipeline.
 
 ## Files
 
-| File | Role |
-| ------ | ------ |
-| `src/cube/domain/constants.ts` | Enum-like constants |
-| `src/cube/domain/guards.ts` | Type guards |
-| `src/cube/domain/pieces.ts` | Piece types and factories |
-| `src/cube/domain/state.ts` | CubeState type |
-| `src/cube/domain/geometry.ts` | Sticker mapping |
-| `src/cube/domain/index.ts` | Barrel exports |
-| `src/shared/enumGuards.ts` | Generic guard factories |
+| File                           | Role                      |
+| ------------------------------ | ------------------------- |
+| `src/cube/domain/constants.ts` | Enum-like constants       |
+| `src/cube/domain/guards.ts`    | Type guards               |
+| `src/cube/domain/pieces.ts`    | Piece types and factories |
+| `src/cube/domain/state.ts`     | CubeState type            |
+| `src/cube/domain/geometry.ts`  | Sticker mapping           |
+| `src/cube/domain/index.ts`     | Barrel exports            |
+| `src/shared/enumGuards.ts`     | Generic guard factories   |

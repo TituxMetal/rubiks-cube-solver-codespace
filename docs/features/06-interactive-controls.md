@@ -1,9 +1,6 @@
----
-title: "Feature Shape: Interactive Controls"
-status: not-started
-milestone: M3
-date: 2026-03-29
----
+# Feature Shape: Interactive Controls
+
+> Status: not-started | Milestone: M3 | Date: 2026-03-29
 
 ## Summary
 
@@ -72,9 +69,9 @@ const $moveHistory = atom<MoveToken[]>([])
 
 ## Files (planned)
 
-| File | Role |
-| ------ | ------ |
-| `src/features/cube/stores/cube.store.ts` | Reactive state |
-| `src/features/cube/hooks/useCube.ts` | Actions hook |
-| `src/features/cube/components/CubeControls.tsx` | Buttons UI |
-| `src/features/cube/components/MoveHistory.tsx` | History display |
+| File                                            | Role            |
+| ----------------------------------------------- | --------------- |
+| `src/features/cube/stores/cube.store.ts`        | Reactive state  |
+| `src/features/cube/hooks/useCube.ts`            | Actions hook    |
+| `src/features/cube/components/CubeControls.tsx` | Buttons UI      |
+| `src/features/cube/components/MoveHistory.tsx`  | History display |

@@ -1,8 +1,6 @@
----
-title: "Rubik's Cube 3×3 – Project Vision (for Copilot)"
-status: active
-date: 2026-03-29
----
+# Rubik's Cube 3×3 – Project Vision
+
+> Status: active | Date: 2026-03-29
 
 ## Goal
 
@@ -11,6 +9,7 @@ Build a Rubik’s Cube 3×3 engine in TypeScript (Vite + React). The engine must
 - deterministic and testable
 - independent from UI and human viewpoint
 - functional (no classes required)
+
 UI (React) will visualize and drive the engine.
 
 No database, no persistence layer. Runtime state lives in the frontend (Nanostore).
@@ -32,7 +31,7 @@ Dependency rules (strict):
 - domain depends on nothing (except `shared/`)
 - application depends on domain
 - infrastructure depends on domain (and may implement application contracts)
-- features (UI) depends on cube/* and components/ui
+- features (UI) depends on `cube/*` and `components/ui`
 - never the other way around (avoid cycles)
 
 ## Folder Structure
@@ -99,13 +98,15 @@ and [features/](features/) for individual feature shapes.
 - Positions are **identifiers**:
   - Corner positions: "UFR", "URB", ...
   - Edge positions: "UF", "UR", ...
-  These identifiers are treated as keys, not as mutable values.
+
+These identifiers are treated as keys, not as mutable values.
+
 - Moves are defined in the engine reference frame (U, D, L, R, F, B). UI perspective is separate.
 - Favor data-driven move tables + pure functions.
 
 ## What to implement next (strict order)
 
-1) `cube/domain/pieces.ts`
+1. `cube/domain/pieces.ts`
    - Define types for physical pieces:
      - CornerPiece: id, colors (3), position, orientation (0|1|2)
      - EdgePiece: id, colors (2), position, orientation (0|1)
@@ -115,13 +116,13 @@ and [features/](features/) for individual feature shapes.
      - CornerPosId = keyof typeof CornerPosition
      - EdgePosId = keyof typeof EdgePosition
 
-2) `cube/domain/state.ts`
+2. `cube/domain/state.ts`
    - Define `CubeState` as position-indexed records:
      - corners: Record<CornerPosId, CornerPiece>
      - edges: Record<EdgePosId, EdgePiece>
      - (optional) centers: Record<FaceCode, ColorCode>
 
-3) `cube/application/use-cases/createSolvedState.ts`
+3. `cube/application/use-cases/createSolvedState.ts`
    - Build a canonical solved CubeState from constants.
    - Provide unit tests:
      - all positions exist (8 corners, 12 edges)
@@ -129,16 +130,17 @@ and [features/](features/) for individual feature shapes.
      - in solved state, piece.id === piece.position
      - orientations are all 0
 
-4) `cube/infrastructure/render/toStickers.ts`
+4. `cube/infrastructure/render/toStickers.ts`
    - Convert CubeState -> stickers for UI:
      - output structure: Record<FaceCode, ColorCode[]> where each face has length 9
    - Add tests:
      - solved cube produces 6 uniform faces (all 9 stickers same color per face)
 
 Only after (1)-(4) are done:
-5) implement one move (U) with tests (U x4 = identity)
-6) implement remaining moves
-7) UI wiring (CubeNet + Controls)
+
+1. Implement one move (U) with tests (U x4 = identity)
+2. Implement remaining moves
+3. UI wiring (CubeNet + Controls)
 
 ## Testing
 

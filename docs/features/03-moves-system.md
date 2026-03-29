@@ -1,9 +1,6 @@
----
-title: "Feature Shape: Moves System"
-status: not-started
-milestone: M2
-date: 2026-03-29
----
+# Feature Shape: Moves System
+
+> Status: not-started | Milestone: M2 | Date: 2026-03-29
 
 ## Summary
 
@@ -36,12 +33,24 @@ the 6 global rotations (x, y, z and inverses).
 
 ```typescript
 type FaceMove =
-  | "U" | "U'" | "U2"
-  | "D" | "D'" | "D2"
-  | "L" | "L'" | "L2"
-  | "R" | "R'" | "R2"
-  | "F" | "F'" | "F2"
-  | "B" | "B'" | "B2"
+  | 'U'
+  | "U'"
+  | 'U2'
+  | 'D'
+  | "D'"
+  | 'D2'
+  | 'L'
+  | "L'"
+  | 'L2'
+  | 'R'
+  | "R'"
+  | 'R2'
+  | 'F'
+  | "F'"
+  | 'F2'
+  | 'B'
+  | "B'"
+  | 'B2'
 
 type MoveToken = FaceMove
 ```
@@ -94,13 +103,13 @@ Convenience function: fold over a sequence of tokens.
 
 ## Files (planned)
 
-| File | Role |
-| ------ | ------ |
-| `src/cube/domain/moves/tokens.ts` | MoveToken type |
-| `src/cube/domain/moves/tables.ts` | Permutation tables |
-| `src/cube/domain/moves/apply.ts` | applyMove function |
-| `src/cube/domain/moves/index.ts` | Barrel exports |
-| `src/cube/application/use-cases/applyMoves.ts` | Sequence use-case |
+| File                                           | Role               |
+| ---------------------------------------------- | ------------------ |
+| `src/cube/domain/moves/tokens.ts`              | MoveToken type     |
+| `src/cube/domain/moves/tables.ts`              | Permutation tables |
+| `src/cube/domain/moves/apply.ts`               | applyMove function |
+| `src/cube/domain/moves/index.ts`               | Barrel exports     |
+| `src/cube/application/use-cases/applyMoves.ts` | Sequence use-case  |
 
 ---
 

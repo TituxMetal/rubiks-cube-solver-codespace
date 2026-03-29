@@ -25,14 +25,14 @@ apply moves, scramble, and (eventually) solve.
 
 ## Tech stack
 
-| Layer | Technology |
-| ------- | ------------ |
-| Language | TypeScript (strict) |
-| UI | React 19 |
-| Build | Vite 7 |
-| Styling | Tailwind CSS v4 |
-| Testing | Vitest |
-| State | Nanostore (planned) |
+| Layer        | Technology               |
+| ------------ | ------------------------ |
+| Language     | TypeScript (strict)      |
+| UI           | React 19                 |
+| Build        | Vite 7                   |
+| Styling      | Tailwind CSS v4          |
+| Testing      | Vitest                   |
+| State        | Nanostore (planned)      |
 | Architecture | Hexagonal / Clean layers |
 
 ---
@@ -41,23 +41,31 @@ apply moves, scramble, and (eventually) solve.
 
 ### Prerequisites
 
-- Node.js 20+ (Bun migration planned)
+- [Bun](https://bun.sh/) 1.3+
+- Node.js 20+ (used by Vitest runtime)
 
 ### Install and run
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your
-browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Run tests
 
 ```bash
-npm test          # watch mode
-npm run test:run  # single run
+bun test          # watch mode
+bun run test:run  # single run
+```
+
+### Verify
+
+```bash
+bun run typecheck    # TypeScript check
+bun run lint:check   # ESLint
+bun run format:check # Prettier
 ```
 
 ---
