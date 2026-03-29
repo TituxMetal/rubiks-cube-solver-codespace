@@ -1,8 +1,10 @@
 export const CubeControls = () => {
   return (
-    <section className='flex flex-col gap-4'>
-      <h2 className='title'>Cube Controls</h2>
-      <p>Controls will go here.</p>
+    <section className='card bg-base-200 shadow-lg'>
+      <div className='card-body'>
+        <h2 className='card-title text-lg'>Cube Controls</h2>
+        <p className='text-base-content/70 text-sm'>Controls will go here.</p>
+      </div>
     </section>
   )
 }
