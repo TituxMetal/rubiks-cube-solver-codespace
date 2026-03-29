@@ -13,7 +13,7 @@ describe('Cube Domain - stickerMapping', () => {
     expect(leftEdgeSticker).toEqual({ type: 'edge', edgeId: 'BL', face: 'B' })
     expect(rightEdgeSticker).toEqual({ type: 'edge', edgeId: 'BR', face: 'B' })
   })
-  
+
   it('should have 4 corners, 4 edges and 1 center on each face', () => {
     faces.forEach((faceCode) => {
       const stickers = Object.values(stickerMapping[faceCode])
@@ -57,7 +57,11 @@ describe('Cube Domain - stickerMapping', () => {
 
 describe('Cube Domain - faceIndexInId', () => {
   it('should map face codes to correct indices in piece color arrays', () => {
-    const testCases: Array<{ id: CornerPositionId | EdgePositionId, face: FaceCode, expectedIndex: number }> = [
+    const testCases: Array<{
+      id: CornerPositionId | EdgePositionId
+      face: FaceCode
+      expectedIndex: number
+    }> = [
       { id: 'UFR', face: 'U', expectedIndex: 0 },
       { id: 'UFR', face: 'F', expectedIndex: 1 },
       { id: 'UFR', face: 'R', expectedIndex: 2 },

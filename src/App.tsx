@@ -6,12 +6,12 @@ export const App = () => {
   const stickersByFace = getDemoStickers()
 
   return (
-    <main className='min-h-screen px-2 mx-auto py-4 flex flex-col items-center gap-6'>
+    <main className='mx-auto flex min-h-screen flex-col items-center gap-6 px-2 py-4'>
       <section className='card ringBorder'>
         <h1 className='title'>Rubik's Cube Solver</h1>
         <p>Welcome to the Rubik's Cube Solver application!</p>
       </section>
-      <section className='flex-col md:flex-row gap-4 items-start justify-center w-full lg:max-w-2/6 flex ringBorder p-4'>
+      <section className='ringBorder flex w-full flex-col items-start justify-center gap-4 p-4 md:flex-row lg:max-w-2/6'>
         <CubeNet stickersByFace={stickersByFace} />
         <CubeControls />
       </section>

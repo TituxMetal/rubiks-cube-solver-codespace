@@ -5,9 +5,9 @@ interface CubeNetProps {
   stickersByFace: Record<FaceCode, readonly ColorCode[]>
 }
 
-export const CubeNet = ({  stickersByFace}: CubeNetProps) => {
+export const CubeNet = ({ stickersByFace }: CubeNetProps) => {
   return (
-    <section className='grid grid-cols-4 grid-rows-3 gap-6 place-items-center'>
+    <section className='grid grid-cols-4 grid-rows-3 place-items-center gap-6'>
       <FaceGrid stickers={stickersByFace.U} label='U' className='col-start-2 row-start-1' />
       <FaceGrid stickers={stickersByFace.D} label='D' className='col-start-2 row-start-3' />
       <FaceGrid stickers={stickersByFace.F} label='F' className='col-start-2 row-start-2' />

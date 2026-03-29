@@ -26,7 +26,9 @@ describe('Use Case - createSolvedState', () => {
   it('should set each piece to its solved invariants', () => {
     const solvedState: CubeState = createSolvedState()
 
-    for (const cornerPositionId of Object.keys(CornerPosition) as Array<keyof typeof CornerPosition>) {
+    for (const cornerPositionId of Object.keys(CornerPosition) as Array<
+      keyof typeof CornerPosition
+    >) {
       const cornerPiece = solvedState.corners[cornerPositionId]
 
       expect(cornerPiece.id).toBe(cornerPositionId)
