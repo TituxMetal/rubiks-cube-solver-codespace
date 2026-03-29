@@ -1,4 +1,8 @@
-# Rubik’s Cube 3×3 – Project Vision (for Copilot)
+---
+title: "Rubik's Cube 3×3 – Project Vision (for Copilot)"
+status: active
+date: 2026-03-29
+---
 
 ## Goal
 
@@ -83,14 +87,12 @@ src/
 
 ## Current Status
 
-We already implemented enum-like constants and generic guards:
+Milestone 1 (Foundation) is complete. The domain model, solved
+state factory, sticker rendering pipeline, and basic 2D net UI
+are implemented with 37+ unit tests.
 
-- Color, Face
-- CornerPosition, EdgePosition
-- makeValueGuard(obj)
-- makeKeyGuard(obj)
-
-Unit tests exist as `.spec.ts` files next to implementation files.
+Next milestone: Moves (M2). See [PRD.md](PRD.md) for details
+and [features/](features/) for individual feature shapes.
 
 ## Conventions
 

@@ -1,8 +1,12 @@
-# Rubik’s Cube 3×3 – Architecture & Conventions
+---
+title: "Rubik's Cube 3×3 – Architecture & Conventions"
+status: active
+date: 2026-03-29
+---
 
 ## Project goal
 
-Implement a Rubik’s Cube 3×3 engine in TypeScript (Vite + React),
+Implement a Rubik's Cube 3×3 engine in TypeScript (Vite + React),
 with a clear, deterministic, and viewpoint-independent model.
 
 Main priorities:
@@ -11,7 +15,7 @@ Main priorities:
 - readability
 - strict separation between human perception and algorithmic logic
 
-Solving algorithms will come later.
+For full scope and milestones, see [PRD.md](PRD.md).
 
 ---
 
@@ -29,12 +33,12 @@ is handled separately via global cube rotations.
 
 Faces are fixed and named using standard notation:
 
-U (Up)    = White  
-D (Down)  = Yellow  
-F (Front) = Green  
-B (Back)  = Blue  
-R (Right) = Red  
-L (Left)  = Orange  
+U (Up)    = White
+D (Down)  = Yellow
+F (Front) = Green
+B (Back)  = Blue
+R (Right) = Red
+L (Left)  = Orange
 
 This convention never changes inside the engine.
 
@@ -141,14 +145,22 @@ Translation is done via:
 
 ---
 
-## Planned development steps
+## Development roadmap
 
-1. Define enums and types (Color, Face, Piece, Cube)
-2. Create a canonical solved cube
-3. Implement global rotations (x, y, z)
-4. Implement basic moves (U, D, L, R, F, B)
-5. Add basic tests (same move ×4 = identity)
-6. Optional: React visualization
+See [PRD.md](PRD.md) for detailed milestones. Summary:
+
+1. **M1 — Foundation** (done): domain model, solved state,
+   sticker rendering, 2D net UI
+2. **M2 — Moves**: move tokens, permutation tables,
+   `applyMove()`, identity tests
+3. **M3 — Interaction**: Nanostore state, move buttons,
+   history display, reset
+4. **M4 — Scramble**: random contract, scramble use-case,
+   scramble button
+5. **M5 — Polish**: global rotations, keyboard shortcuts,
+   responsive layout, accessibility
+
+Feature details live in [docs/features/](features/).
 
 ---
 
