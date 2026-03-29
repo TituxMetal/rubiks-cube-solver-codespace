@@ -1,10 +1,19 @@
 import type { ColorCode } from '../../../cube/domain'
 
 export const stickerClassByColor: Record<ColorCode, string> = {
-  Wt: 'bg-zinc-100',
-  Yl: 'bg-amber-300',
-  Rd: 'bg-red-500',
-  Og: 'bg-orange-500',
-  Bl: 'bg-blue-500',
-  Gn: 'bg-green-500'
+  Wt: 'bg-cube-white',
+  Yl: 'bg-cube-yellow',
+  Rd: 'bg-cube-red',
+  Og: 'bg-cube-orange',
+  Bl: 'bg-cube-blue',
+  Gn: 'bg-cube-green'
+} as const
+
+export const colorNameByCode: Record<ColorCode, string> = {
+  Wt: 'white',
+  Yl: 'yellow',
+  Rd: 'red',
+  Og: 'orange',
+  Bl: 'blue',
+  Gn: 'green'
 } as const
