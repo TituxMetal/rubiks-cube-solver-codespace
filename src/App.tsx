@@ -13,7 +13,9 @@ export const App = () => {
           <h1 className='text-xl font-semibold'>Rubik's Cube Solver</h1>
           <DialogShell>
             <DialogTrigger asChild>
-              <button className='btn btn-ghost btn-sm'>About</button>
+              <button type='button' className='btn btn-ghost btn-sm'>
+                About
+              </button>
             </DialogTrigger>
             <DialogContent
               title="Rubik's Cube Solver"
