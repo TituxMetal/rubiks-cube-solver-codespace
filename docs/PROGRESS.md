@@ -47,13 +47,14 @@
 - [x] Radix Dialog integration — DialogShell with `aria-label="Close"` (Phase 4)
 - [x] Final cleanup, accessibility audit & visual verification (Phase 5)
 
-### Moves
+### Moves ([plan](~/.claude/plans/rubiks-cube-solver-03-moves-system.md))
 
-- [ ] Move token type (18 face moves)
-- [ ] Permutation tables (cycles + orientation deltas)
-- [ ] applyMove() pure function
-- [ ] Identity tests (move x4 = original state)
-- [ ] applyMoves() sequence function
+- [x] Move token types + isFaceMove guard + test (Phase 1)
+- [x] PermutationTable type + 6 base move tables + MOVE_TABLES + test (Phase 2)
+- [x] parseMove + applyCycle + applyMove + purity/smoke tests (Phase 3)
+- [x] applyMove identity tests — move×4, move+inverse, double×2 (Phase 3)
+- [x] applyMoves() sequence use-case + composition tests (Phase 4)
+- [x] Moves barrel exports + domain index wiring (Phase 5)
 
 ## M3 — Interaction
 
