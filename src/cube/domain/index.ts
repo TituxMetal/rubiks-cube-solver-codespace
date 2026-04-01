@@ -19,3 +19,5 @@ export {
   makeSolvedEdgePiece
 } from './pieces'
 export type { CubeState } from './state'
+export type { FaceMove, MoveToken, BaseFace, PermutationTable } from './moves'
+export { FACE_MOVES, isFaceMove, MOVE_TABLES, applyMove } from './moves'
